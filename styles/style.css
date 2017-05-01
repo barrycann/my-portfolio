@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic|Open+Sans:800');
+
+body {
+  font-family: 'Gentium Basic', serif;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font: 800 3.2em 'Open Sans';
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  padding: 10px 0;
+  font: italic 400 1.2em/1.4em 'Open Sans';
+  text-transform: uppercase;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #222;
+  
+  /*-webkit-animation: NAME-YOUR-ANIMATION 5s infinite;
+  -moz-animation:    NAME-YOUR-ANIMATION 5s infinite;
+  -o-animation:      NAME-YOUR-ANIMATION 5s infinite; */
+}
+
+.navShrink{
+  animation: nav-shrink 0.2s 1 ease-out forwards;
+}
+
+.navGrow{
+  animation: nav-grow 0.2s 1 ease-in forwards;
+}
+
+nav ul {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: 100px;
+}
+
+nav ul li {
+  font: 18px/24px 'Open Sans';
+  text-transform: uppercase;
+  padding-left: 40px;
+  display: inline-block;
+  list-style: none;
+  color: #eee;
+}
+
+main {
+  margin-top: 100px;
+}
+
+section {
+  height: 400px;
+  background-color: #eee;
+  padding: 100px;
+}
+
+@keyframes nav-shrink {
+  0% { height: 100px }
+  10% { height: 102px }
+  90% { height: 68px}
+  100% { height: 70px }
+}
+
+@keyframes nav-grow {
+  0% { height: 70px }
+  90% { height: 102px}
+  100% { height: 100px }
+}
+
+.intro {
+  background-image: url('./img/main-back.jpg');
+  background-size: cover;
+}
+
+.skills {
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.skill {
+  flex: 1 1 20%;
+  padding: 10px 20px 20px 20px;
+}
+
+.skill img {
+  height: 150px;
+}
+
+.skill p {
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+}
